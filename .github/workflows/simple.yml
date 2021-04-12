@@ -18,8 +18,8 @@ jobs:
         run: echo "Hello World"
       - name: multiline script
         run: |
-          cat /etc/os-release
-          echo "Sasha the best men"
+          pwd
+          cat /home/akalykhan/test_file 
           
         
       
