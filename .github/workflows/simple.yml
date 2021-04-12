@@ -7,6 +7,12 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
     
 jobs:
   run-shell-command:
@@ -17,7 +23,7 @@ jobs:
       - name: multiline script
         run: |
           pwd
-          cat /home/akalykhan/test_file 
+          cat /home/akalykhan/test_file
           
         
       
