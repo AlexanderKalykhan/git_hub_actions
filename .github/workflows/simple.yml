@@ -15,7 +15,7 @@ on:
         default: 'warning'
     
 jobs:
-  run-shell-command:
+  simple-shell-commnand:
     runs-on: [self-hosted]
     steps:
       - name: echo a string
