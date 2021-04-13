@@ -7,6 +7,8 @@ jobs:
   run-github-actions:
     runs-on: self-hosted
     steps:
+      - name: Sleep 30 
+        run: Sleep 30  
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
