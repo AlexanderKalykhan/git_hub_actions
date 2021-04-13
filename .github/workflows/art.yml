@@ -10,9 +10,9 @@ jobs:
 
     - run: mkdir -p path/to/artifact
 
-    - run: echo hello > path/to/artifact/world.txt
+    - run: echo hello > path/to/artifact/sasha.text
 
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: path/to/artifact/world.txt
+        path: path/to/artifact/sasha.text
