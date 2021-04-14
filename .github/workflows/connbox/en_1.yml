@@ -1,4 +1,4 @@
-name: ENV Variables
+name: Sasha
 on: workflow_dispatch
 env:
   WF_5: Kalykhan
