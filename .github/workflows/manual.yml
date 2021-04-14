@@ -6,6 +6,11 @@ on:
         description: Bump Version
         default: v1.0.0
         required: true
+    inputs:
+      file:
+        description: File version
+        default: Real
+        required: true
 jobs:
   bump-version:
     name: Bump Package Version
@@ -14,3 +19,4 @@ jobs:
       - name: Example variable usage
         run: |
           echo ${{ github.event.inputs.version }}
+          echo ${{ github.event.inputs.file }}
