@@ -1,0 +1,17 @@
+name: Connbox-Positioning-tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      AGENT_LABELS:
+        description: 'Labels of Jenkins agents (see available labels - https://git.daimler.com/pages/olu/olu-testing-docs/src/olu-testing-readme/1.scheme-description/index.html#id3)'
+        required: true
+        default: 'minsk-yellow-rpi'
+
+jobs:
+  connbox-positioning-tests:
+    runs-on: ${{ github.event.inputs.AGENT_LABELS }}
+    steps:
+    - name output steps
+    run: |
+      pwd
