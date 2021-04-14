@@ -6,7 +6,6 @@ on:
         description: Bump Version
         default: v1.0.0
         required: true
-    inputs:
       file:
         description: File version
         default: Real
