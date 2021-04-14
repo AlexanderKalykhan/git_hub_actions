@@ -11,7 +11,7 @@ on:
         default: Real
         required: true
       dream:
-        description: File version
+        description: Email field
         default: email
         required: true
 jobs:
@@ -24,5 +24,4 @@ jobs:
           echo ${{ github.event.inputs.version }}
           echo ${{ github.event.inputs.file }}
           echo ${{ github.event.inputs.dream }}
-          env > env.file
-          echo env.file
+          env
