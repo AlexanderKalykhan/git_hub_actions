@@ -10,6 +10,10 @@ on:
         description: File version
         default: Real
         required: true
+      dream:
+        description: File version
+        default: email
+        required: true
 jobs:
   bump-version:
     name: Bump Package Version
@@ -19,3 +23,6 @@ jobs:
         run: |
           echo ${{ github.event.inputs.version }}
           echo ${{ github.event.inputs.file }}
+          echo ${{ github.event.inputs.dream }}
+          env > env.file
+          echo env.file
