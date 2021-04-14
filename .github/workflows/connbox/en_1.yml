@@ -1,0 +1,17 @@
+name: ENV Variables
+on: workflow_dispatch
+env:
+  WF_5: Kalykhan
+  
+jobs:
+  log-env:
+    runs-on: self-hosted
+    steps:
+      - name: Log ENV Variables
+        run: |
+          echo "WF_ENV: ${WF_5}"
+      - name: Log secrets
+        run: |
+          env > ${GITHUB_WORKSPACE}/file
+          cat ${GITHUB_WORKSPACE}/file 
+  
