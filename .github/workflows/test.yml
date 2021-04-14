@@ -12,6 +12,6 @@ jobs:
   connbox-positioning-tests:
     runs-on: ${{ github.event.inputs.AGENT_LABELS }}
     steps:
-     - name: output steps
-       run: |
-         pwd
+      - name: output steps
+        run: |
+          pwd
