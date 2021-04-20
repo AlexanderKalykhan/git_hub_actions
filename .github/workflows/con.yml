@@ -6,10 +6,19 @@ jobs:
   container-job:
     runs-on: self-hosted
     steps:
-      - name: Checkout last git changes
-        uses: actions/checkout@v1
-      - name:
-        uses: ./.github/actions/build_code
+      - name: Get current directory path
+        run: |
+          pwd
+          ls
+  container:
+    image: golang:1.13-alpine
+  env:
+    SAA: Done it
+  steps:
+    - name: print Env value
+      run: |
+        echo $SAA
+        pwd
 
     
   
