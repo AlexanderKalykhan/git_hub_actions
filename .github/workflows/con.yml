@@ -10,15 +10,15 @@ jobs:
         run: |
           pwd
           ls
-  container:
-    image: golang:1.13-alpine
-  env:
-    SAA: Done it
-  steps:
-    - name: print Env value
-      run: |
-        echo $SAA
-        pwd
+    container:
+      image: golang:1.13-alpine
+    env:
+      SAA: Done it
+      steps:
+        - name: print Env value
+          run: |
+            echo $SAA
+            pwd
 
     
   
