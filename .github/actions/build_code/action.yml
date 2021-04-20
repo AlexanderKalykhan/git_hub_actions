@@ -10,3 +10,4 @@ runs:
     - name: print Env value
       run: |
         echo $SAA
+      shell: bash
