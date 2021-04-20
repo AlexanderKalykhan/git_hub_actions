@@ -16,7 +16,7 @@ jobs:
       - name: View current directory
         run: |
           cat /etc/os-release
-          pwd /
+          ls /
           ls
       - name: Install docker inside pipeline
         run: |
