@@ -15,7 +15,7 @@ jobs:
 #        uses: actions/checkout@v1
       - name: View current directory
         run: |
-          pwd
+          cat /etc/os-release
           ls
       - name: Install docker inside pipeline
         run: |
