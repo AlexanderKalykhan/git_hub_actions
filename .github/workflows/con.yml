@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: print Env value
         run: |
-          echo $SAA
-    
+          echo $SAA  
     
   
