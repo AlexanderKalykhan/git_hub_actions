@@ -30,4 +30,4 @@ jobs:
           ls $GITHUB_WORKSPACE
           echo $GITHUB_WORKSPACE
       - name: Compile the code into an executable
-        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v /etc:/work -w /work golang:1.13-alpine sh -c "ls && pwd"
+        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v "/__w/git_hub_actions/git_hub_actions":/work -w /work golang:1.13-alpine sh -c "ls && pwd"
