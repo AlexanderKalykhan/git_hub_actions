@@ -11,8 +11,8 @@ jobs:
 #        run: |
 #          pwd
 #          ls
-      - name: Checkout Project
-        uses: actions/checkout@v1
+#      - name: Checkout Project
+#        uses: actions/checkout@v1
       - name: View current directory
         run: |
           pwd
