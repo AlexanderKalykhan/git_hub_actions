@@ -6,11 +6,13 @@ jobs:
     runs-on: self-hosted
     container:
       image: golang:1.13-alpine
+      env:
+        TUT: value 2
     steps:
       - name: View current directory
         run: |
           cat /etc/os-release
-          ls
+          echo $TUT
 
 #      - name: Install docker inside pipeline
 #        run: |
