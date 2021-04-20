@@ -3,7 +3,7 @@ name: Docker-image
 on: push 
 
 jobs: 
-  container-job
+  container-job:
     runs-on: self-hosted
     container:
       image: golang:1.13-alpine
