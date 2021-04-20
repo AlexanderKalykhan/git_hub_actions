@@ -11,27 +11,19 @@ jobs:
 #        run: |
 #          pwd
 #          ls
-      - name: create new directory
-        run: |
-          mkdir /test
-          cd /test
-      - name: Checkout Project
-        uses: actions/checkout@v1
-      - name: View current directory
-        run: |
-          mv -f $GITHUB_WORKSPACE/* /test
-          pwd
-          ls
+
       - name: Install docker inside pipeline
         run: |
           apk add --update docker openrc
           rc-update add docker boot
       - name: Pull golang:1.13-alpine docker image
         run: docker pull golang:1.13-alpine
+      - name: Checkout Project
+        uses: actions/checkout@v1
       - name: view conteng
         run: |
           pwd
           ls $GITHUB_WORKSPACE
           echo $GITHUB_WORKSPACE
       - name: Compile the code into an executable
-        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v /test:/work -w /work golang:1.13-alpine sh -c "ls && pwd"
+        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v $GITHUB_WORKSPACE:/work -w /work golang:1.13-alpine sh -c "ls && pwd"
