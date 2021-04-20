@@ -3,7 +3,7 @@ on: push
 
 jobs:
   node-docker:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: alpine:latest
     steps:
@@ -11,8 +11,8 @@ jobs:
 #        run: |
 #          pwd
 #          ls
-#      - name: Checkout Project
-#        uses: actions/checkout@v1
+      - name: Checkout Project
+        uses: actions/checkout@v1
       - name: View current directory
         run: |
           cat /etc/os-release
@@ -29,4 +29,4 @@ jobs:
           ls $GITHUB_WORKSPACE
           echo $GITHUB_WORKSPACE
       - name: Compile the code into an executable
-        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v $GITHUB_WORKSPACE:/root/work -w /root/work golang:1.13-alpine sh -c "ls -la"
+        run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v $GITHUB_WORKSPACE:/root/work -w /root/work golang:1.13-alpine sh -c "ls /"
