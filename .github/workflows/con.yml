@@ -6,16 +6,8 @@ jobs:
   container-job:
     runs-on: self-hosted
     steps:
-      - name: First Docker
-        run: sudo docker run --rm --privileged --net=host golang:1.13-alpine bash -c 'pwd'
-    
-#    container:
- #     image: golang:1.13-alpine
-  #  env:
-  #    SAA: Done it
-  #  steps:
-   #   - name: print Env value
-    #    run: |
-    #      echo $SAA  
+      - name:
+        uses: ./.github/actions/build_code
+
     
   
