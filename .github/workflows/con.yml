@@ -23,5 +23,10 @@ jobs:
           rc-update add docker boot
       - name: Pull golang:1.13-alpine docker image
         run: docker pull golang:1.13-alpine
+      - name: view conteng
+        run: |
+          pwd
+          ls $GITHUB_WORKSPACE
+          echo $GITHUB_WORKSPACE
       - name: Compile the code into an executable
         run: docker run --rm --privileged -e "CGO_ENABLED=0" -e "GOFLAGS=-mod=vendor -ldflags=-s -trimpath"  --net=host -v $GITHUB_WORKSPACE:/root/work -w /root/work golang:1.13-alpine sh -c "ls -la"
