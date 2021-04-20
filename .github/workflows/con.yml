@@ -1,6 +1,5 @@
-name: Docker-image
-
-on: push 
+name: container
+on: push
 
 jobs:
   node-docker:
