@@ -12,9 +12,9 @@ jobs:
 #          pwd
 #          ls
       - name: create new directory
-          run: |
-            mkdir /test
-            cd /test
+        run: |
+          mkdir /test
+          cd /test
       - name: Checkout Project
         uses: actions/checkout@v1
       - name: View current directory
