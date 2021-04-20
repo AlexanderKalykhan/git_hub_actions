@@ -18,7 +18,7 @@ jobs:
           pwd
           ls
       - name: Install docker inside pipeline
-        run: echo $GITHUB_WORKSPACE
+        run: ls $GITHUB_WORKSPACE
 #        run: |
 #          apk add --update docker openrc
 #          rc-update add docker boot
