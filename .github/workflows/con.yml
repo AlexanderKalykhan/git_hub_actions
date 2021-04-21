@@ -8,11 +8,15 @@ jobs:
       image: golang:1.13-alpine
       env:
         TUT: value 2
+        VUV: value 3
     steps:
       - name: View current directory
         run: |
           cat /etc/os-release
           echo $TUT
+          echo {$VUV}
+          echo $TUT_$VUV
+          echo {$TUT}_{$VUV}
 
 #      - name: Install docker inside pipeline
 #        run: |
