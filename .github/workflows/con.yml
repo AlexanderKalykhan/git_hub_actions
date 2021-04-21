@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: View current directory
         run: |
-          echo $GITHUB_JOB
+          echo $GITHUB_RUN_ID
           echo $GITHUB_JOB
           echo $GITHUB_ACTION
 
