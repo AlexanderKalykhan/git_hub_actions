@@ -16,12 +16,9 @@ jobs:
           rm -rf *
       - name: View current directory
         run: |
-          cat /etc/os-release
-          echo $TUT
-          echo {$VUV}
-          echo $TUT_$VUV
-          echo $TUT\_$VUV
-          echo $TUT/_$VUV
+          echo $GITHUB_JOB
+          echo $GITHUB_JOB
+          echo $GITHUB_RUN_ID
 
 #      - name: Install docker inside pipeline
 #        run: |
