@@ -10,6 +10,10 @@ jobs:
         TUT: 2
         VUV: 3
     steps:
+      - name: Remove all files from workspace
+        run: |
+          shopt -s dotglob
+          rm -rf *
       - name: View current directory
         run: |
           cat /etc/os-release
