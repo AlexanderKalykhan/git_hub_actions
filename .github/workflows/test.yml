@@ -15,3 +15,7 @@ jobs:
       - name: output steps
         run: |
           pwd
+          echo $GITHUB_RUN_ID
+          echo $GITHUB_SERVER_URL
+          echo $GITHUB_API_URL
+          
