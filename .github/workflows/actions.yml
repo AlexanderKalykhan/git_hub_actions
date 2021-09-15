@@ -16,6 +16,7 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
+      - run: |  # Test tags can be defined in inputs or in workflow env variables
         if [ "${{ env.AGENT_LABELS == test }}" ]
         then
         echo fine
