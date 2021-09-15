@@ -16,7 +16,7 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-        if [ "${{ env.AGENT_LABELS == 'test' }}" ]
+        if [ "${{ env.AGENT_LABELS == test }}" ]
         then
         echo fine
         else
