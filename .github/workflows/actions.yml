@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v1
-      - name: List of files
-        if [ "${{ env.AGENT_LABELS == 'test' }}" ]
-        then
-        echo fine
-        else
-        echo bad
-        fi
+#      - name: List of files
+#        if [ "${{ env.AGENT_LABELS == 'test' }}" ]
+#        then
+#        echo fine
+#        else
+#        echo bad
+#        fi
 #        if: contains(['SNAPSHOT'],env.AGENT_LABELS)
 #        run: |
 #         echo "sasha"
