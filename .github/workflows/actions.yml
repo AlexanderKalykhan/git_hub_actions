@@ -19,12 +19,8 @@ jobs:
       - run: |  # Test tags can be defined in inputs or in workflow env variables
           if [ "${{ env.AGENT_LABELS }}" ]
           then
-            echo fine
+            echo "fine"
           else
-            echo bad
+            echo "bad"
           fi
         shell: bash
-#        if: contains(['SNAPSHOT'],env.AGENT_LABELS)
-#        run: |
-#         echo "sasha"
-#
