@@ -16,7 +16,7 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-        if: contains(['SNAPSHOT'] , env.AGENT_LABELS)
+        if: env.AGENT_LABELS == 'fale'
         run: |
           echo "sasha"
 #      - run: |  # Test tags can be defined in inputs or in workflow env variables
