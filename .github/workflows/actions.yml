@@ -16,7 +16,7 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-        if: env.AGENT_LABELS == 'fale' || env.AGENT_LABELS == 'male'
+        if: env.AGENT_LABELS == 'fale' || env.AGENT_LABELS == 'test'
         run: |
           echo "sasha"
 #      - run: |  # Test tags can be defined in inputs or in workflow env variables
