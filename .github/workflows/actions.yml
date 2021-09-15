@@ -15,10 +15,14 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v1
-      - name: List of files
+      - name: Run on Minsk runner
         if: env.AGENT_LABELS == 'fale' || env.AGENT_LABELS == 'test'
         run: |
           echo "sasha"
+      - name: Run on Stutgart runner
+        if: env.AGENT_LABELS == 'fale' || env.AGENT_LABELS == 'tests'
+        run: |
+          echo "test"
 #      - run: |  # Test tags can be defined in inputs or in workflow env variables
 #          if [ "${{ env.AGENT_LABELS }}" ]
 #          then
