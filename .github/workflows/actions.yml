@@ -16,7 +16,7 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-        if: contains('${{ env.AGENT_LABELS }}', 'tests')
+        if: contains('${{ env.AGENT_LABELS }}', 'free')
         run: |
          echo "sasha"
   
