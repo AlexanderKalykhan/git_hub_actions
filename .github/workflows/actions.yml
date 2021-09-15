@@ -16,11 +16,16 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-      - run: |  # Test tags can be defined in inputs or in workflow env variables
-          if [ "${{ env.AGENT_LABELS }}" ]
-          then
-            echo "fine"
-          else
-            echo "bad"
-          fi
-        shell: bash
+        if: contains(['SNAPSHOT'],env.AGENT_LABELS)
+        run: |
+          echo "sasha"
+#      - run: |  # Test tags can be defined in inputs or in workflow env variables
+#          if [ "${{ env.AGENT_LABELS }}" ]
+#          then
+#            echo fine
+#          else
+#            echo bad
+#          fi
+#        shell: bash
+
+
