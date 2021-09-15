@@ -17,12 +17,12 @@ jobs:
         uses: actions/checkout@v1
       - name: List of files
       - run: |  # Test tags can be defined in inputs or in workflow env variables
-        if [ "${{ env.AGENT_LABELS == test }}" ]
-        then
-        echo fine
-        else
-        echo bad
-        fi
+          if [ "${{ env.AGENT_LABELS }}" ]
+          then
+            echo fine
+          else
+            echo bad
+          fi
         shell: bash
 #        if: contains(['SNAPSHOT'],env.AGENT_LABELS)
 #        run: |
