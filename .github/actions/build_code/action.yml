@@ -1,13 +1,4 @@
 name: 'Update testing image'
 description: 'Login to docker registry and update image'
 runs:
-  using: "composite"
-  container:
-    image: golang:1.13-alpine
-  env:
-    SAA: Done it
-  steps:
-    - name: print Env value
-      run: |
-        echo $SAA
-      shell: bash
+  echo sasha
