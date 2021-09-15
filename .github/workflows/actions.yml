@@ -16,7 +16,13 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v1
       - name: List of files
-        if: contains('${{ env.AGENT_LABELS }}', 'free')
-        run: |
-         echo "sasha"
-  
+        if [ "${{ env.AGENT_LABELS == 'test' }}" ]
+        then
+        echo fine
+        else
+        echo bad
+        fi
+#        if: contains(['SNAPSHOT'],env.AGENT_LABELS)
+#        run: |
+#         echo "sasha"
+#
